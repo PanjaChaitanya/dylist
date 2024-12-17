@@ -21,6 +21,9 @@ document.getElementById('bincar').innerText = "Removed Car : "
     return (
         <>
             <div className="container">
+                <h3 className= "carsListHead" >
+                    Cars List
+                </h3>
                 <div className="imageContainer">
                     <img src="/carhead.jpg" width='200px' alt="Car Header" />
                 </div>
