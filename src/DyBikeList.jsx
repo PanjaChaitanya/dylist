@@ -20,6 +20,9 @@ function Dylist() {
     return (
         <>
             <div className="container">
+               <h3 className= "bikesListHead" >
+                    Bikes List
+                </h3>
                 <div className="imageContainer">
                     <img src="/bikehead.jpg" width='200px' alt="Car Header" />
                 </div>
