@@ -3,12 +3,16 @@ import './Dylist.css';
 
 function Dylist() {
     const [mobile, setMobile] = useState(["Samsung", "Black Berry", "iPhone"]);
+    const [removedMobiles, setRemovedMobiles] = useState([]);
 
     let removeMobile = () => {
-        setMobile(mobile.slice(0, -1));
-        document.getElementById('deleted').innerText= mobile.slice(-1)
-        document.getElementById('bin').innerText = "Removed Mobile : "
+        if (mobile.length > 0) {
+            const lastMobile = mobile.at(-1);
+            setMobile(mobile.slice(0, -1));
+            setRemovedMobiles([...removedMobiles, lastMobile]);
+        }
     };
+
     let addMobile = () => {
         let carr = document.getElementById('input3').value;
         if (carr === '') {
@@ -18,11 +22,12 @@ function Dylist() {
             document.getElementById('input3').value = '';
         }
     };
+
     return (
         <>
             <div className="container">
                 <div className="imageContainer">
-                    <img src="/mobilehead.jpg" width='200px' alt="Car Header" />
+                    <img src="/mobilehead.jpg" width='200px' alt="Mobile Header" />
                 </div>
                 <div className="inputbox">
                     <input type="text" placeholder="Enter Mobile Name" id="input3" />
@@ -39,13 +44,26 @@ function Dylist() {
                     </button>
                 </div>
                 <div className="listContainer">
-                    {mobile.map((x, index) => (<li key={index}>📱 {x}</li>))}
+                    <h2>Available Mobiles:</h2>
+                    {
+                        (() => {
+                            if (mobile.length > 0) {
+                                return (
+                                    <ul>
+                                        {mobile.map((x, index) => (
+                                            <li key={index}>📱 {x}</li>
+                                        ))}
+                                    </ul>
+                                );
+                            } else {
+                                return <p>No Mobiles Left</p>;
+                            }
+                        })()
+                    }
                 </div>
                 <div className="deletedContainer">
-                    <h2 id='bin'>
-
-                    </h2>
-                    <p id='deleted'></p>
+                    <h2>Removed Mobiles:</h2>
+                    {removedMobiles.map((x, index) => (<li key={index}>🗑️ {x}</li>))}
                 </div>
             </div>
         </>
