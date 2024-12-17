@@ -1,9 +1,15 @@
 import React from 'react'
-import Dylist from './Dylist'
+import DyCarList from './DyCarList'
+import DyBikeList from './DyBikeList'
+import DyMobileList from './DyMobileList'
+import './App.css'
+
 function App() {
   return (
-    <div>
-      <Dylist/>
+    <div className='mainContainer'>
+        <DyCarList />
+        <DyBikeList />
+        <DyMobileList />
     </div>
   )
 }
