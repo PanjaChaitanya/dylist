@@ -5,7 +5,7 @@ function Dylist() {
     const [bike, setBike] = useState(["Karizma", "Royal Enfield", "Hero Splender"]);
     let removeBike = () => {
         setBike(bike.slice(0, -1));
-        document.getElementById('deletedbike').innerText= bike.slice(-1)
+        document.getElementById('deletedbike').innerText="🗑️" + bike.slice(-1)
         document.getElementById('binbike').innerText = "Removed Bike : "
     };
     let addBike = () => {
