@@ -6,7 +6,7 @@ function Dylist() {
 
     let removeCar = () => {
         setCar(car.slice(0, -1));
-        document.getElementById('deletedcar').innerText= car.slice(-1)
+        document.getElementById('deletedcar').innerText= "🗑️" + car.slice(-1)
 document.getElementById('bincar').innerText = "Removed Car : "
     };
     let addCar = () => {
