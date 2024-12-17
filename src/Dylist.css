@@ -11,14 +11,22 @@ body{
     height: 85vh;
     gap: 20px;
 }
-.carsListHead{
+.carsListHead,.bikesListHead, .mobilesListHead{
     padding: 10px;
-    background-color: orangered;
     width: 300px;
     border-radius: 10px;
     text-align: center;
+    color: white;
 }
-    
+.carsListHead{
+    background-color: orangered;
+}
+.bikesListHead{
+    background-color: blue;
+}
+.mobilesListHead{
+    background-color: darkpink;
+}
 input{
     border: 1px solid skyblue;
     padding: 10px;
