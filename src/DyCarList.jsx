@@ -7,7 +7,7 @@ function Dylist() {
     let removeCar = () => {
         setCar(car.slice(0, -1));
         document.getElementById('deletedcar').innerText= car.slice(-1)
-        document.getElementById('bincar').innerText = "Removed Car : "
+document.getElementById('bincar').innerText = "Removed Car : "
     };
     let addCar = () => {
         let carr = document.getElementById('input').value;
@@ -43,7 +43,6 @@ function Dylist() {
                 </div>
                 <div className="deletedContainer">
                     <h2 id='bincar'>
-
                     </h2>
                     <p id='deletedcar'></p>
                 </div>
