@@ -24,7 +24,7 @@ function Dylist() {
                     <img src="/bikehead.jpg" width='200px' alt="Car Header" />
                 </div>
                 <div className="inputbox">
-                    <input type="text" placeholder="Enter Car Name" id="input2" />
+                    <input type="text" placeholder="Enter Bike Name" id="input2" />
                 </div>
                 <div className="buttonContainer">
                     <button id="green" onClick={addBike}>
