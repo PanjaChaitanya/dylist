@@ -3,12 +3,18 @@ import './Dylist.css';
 
 function Dylist() {
     const [car, setCar] = useState(["Ferrari", "Jaguar", "Rolls Royce"]);
+    const [removedCars, setRemovedCars] = useState([]);
 
     let removeCar = () => {
-        setCar(car.slice(0, -1));
-        document.getElementById('deletedcar').innerText= car.slice(-1)
-        document.getElementById('bincar').innerText = "Removed Car : "
+        if (car.length > 0) {
+            const lastCar = car.slice(-1)[0];
+            setCar(car.slice(0, -1));
+            setRemovedCars([...removedCars, lastCar]);
+        } else {
+            alert("No cars left to remove!");
+        }
     };
+
     let addCar = () => {
         let carr = document.getElementById('input').value;
         if (carr === '') {
@@ -18,6 +24,7 @@ function Dylist() {
             document.getElementById('input').value = '';
         }
     };
+
     return (
         <>
             <div className="container">
@@ -39,13 +46,12 @@ function Dylist() {
                     </button>
                 </div>
                 <div className="listContainer">
+                    <h2>Available Cars:</h2>
                     {car.map((x, index) => (<li key={index}>🚘 {x}</li>))}
                 </div>
                 <div className="deletedContainer">
-                    <h2 id='bincar'>
-
-                    </h2>
-                    <p id='deletedcar'></p>
+                    <h2>Removed Cars:</h2>
+                    {removedCars.map((x, index) => (<li key={index}>🗑️ {x}</li>))}
                 </div>
             </div>
         </>
