@@ -6,7 +6,7 @@ function Dylist() {
 
     let removeMobile = () => {
         setMobile(mobile.slice(0, -1));
-        document.getElementById('deleted').innerText= mobile.slice(-1)
+        document.getElementById('deleted').innerText= "🗑️" + mobile.slice(-1)
         document.getElementById('bin').innerText = "Removed Mobile : "
     };
     let addMobile = () => {
