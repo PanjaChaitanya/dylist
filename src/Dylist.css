@@ -11,6 +11,11 @@ body{
     height: 85vh;
     gap: 20px;
 }
+.carsListHead{
+    padding: 10px;
+    background-color: orangered;
+}
+    
 input{
     border: 1px solid skyblue;
     padding: 10px;
