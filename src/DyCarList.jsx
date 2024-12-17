@@ -21,12 +21,9 @@ document.getElementById('bincar').innerText = "Removed Car : "
     return (
         <>
             <div className="container">
-<div>
                 <div className="imageContainer">
                     <img src="/carhead.jpg" width='200px' alt="Car Header" />
                 </div>
-</div>
- <div>
                 <div className="inputbox">
                     <input type="text" placeholder="Enter Car Name" id="input" />
                 </div>
@@ -50,7 +47,6 @@ document.getElementById('bincar').innerText = "Removed Car : "
                     <p id='deletedcar'></p>
                 </div>
             </div>
-</div>
         </>
     );
 }
