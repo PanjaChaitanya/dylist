@@ -52,4 +52,3 @@ document.getElementById('bincar').innerText = "Removed Car : "
 }
 
 export default Dylist;
-Display the every removed item 
